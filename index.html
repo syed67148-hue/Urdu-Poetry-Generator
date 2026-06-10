@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>AI Urdu Poetry Generator</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<nav>
+
+    <h2>Urdu AI Generator</h2>
+
+    <div>
+
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+
+        <button onclick="toggleDarkMode()">
+            Dark Mode
+        </button>
+
+    </div>
+
+</nav>
+
+<div class="container">
+
+    <h1>AI Urdu Poetry Generator</h1>
+
+    <select id="category">
+
+        <option value="romantic">Romantic</option>
+        <option value="sad">Sad</option>
+        <option value="motivational">Motivational</option>
+        <option value="islamic">Islamic</option>
+        <option value="story">Story</option>
+
+    </select>
+
+    <input
+        type="text"
+        id="seed"
+        placeholder="محبت">
+
+    <button onclick="generatePoetry()">
+
+        Generate Poetry
+
+    </button>
+
+    <div id="output"
+         class="output"
+         dir="rtl">
+
+        شاعری یہاں ظاہر ہوگی
+
+    </div>
+
+</div>
+
+<div class="history">
+
+    <h2>Generation History</h2>
+
+    <ul id="historyList"></ul>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>
